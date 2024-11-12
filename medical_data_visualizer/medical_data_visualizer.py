@@ -27,6 +27,7 @@ def draw_cat_plot():
     graph = sns.catplot(data=df_cat, kind="bar", x="variable", y="total", hue="value", col="cardio")
     fig = graph.fig
 
+    plt.show()
     # Do not modify the next two lines
     fig.savefig('catplot.png')
     return fig
@@ -52,6 +53,7 @@ def draw_heat_map():
     # Draw the heatmap with 'sns.heatmap()'
     sns.heatmap(corr, mask=mask, square=True, linewidths=0.5, annot=True, fmt="0.1f")
 
+    plt.show()
     # Do not modify the next two lines
-    fig.savefig('heatmap.png')
+    fig.savefig('data/heatmap.png')
     return fig
